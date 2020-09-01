@@ -14,14 +14,18 @@ body{
 }
 
 nav{
-    height: 60px;
-    background-color: rgba(0,0,0,0.45);
+    height: fit-content;
+    background-color: rgba(0,0,0,0.3);
     align-items: center;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     padding: 0px 20px 0px 20px;
-    backdrop-filter: contrast(130%) brightness(120%) blur(5px);
+}
+
+.navcontrols{
+    max-width: 350px;
 }
 
 input[type="search"]{
@@ -56,21 +60,87 @@ i.navicon{
     color: aliceblue;
 }
 
-@media only screen and (max-width:500px){
+h4{
+    color: aliceblue;
+    width: 200px;
+    text-align: center;
+    padding: 10px;  
+    margin: 0px 0 0 -25px;  
+    font-size: 18px;
+    border-radius: 15px;
+}
+
+h4:hover{
+    background-color:rgba(0,0,0,0.3);
+    animation: infinite;
+}
+.sidenav{
+    margin: 3% 0 0 -1%;
+    display: flex;
+    flex-direction: column;
+}
+
+.maincontainer{
+    display: flex;
+    flex-direction: row;
+}
+
+.userdiv{
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    height: fit-content;
+}
+.userdiv:hover{
+    background-color:rgba(0,0,0,0.3);
+    animation: infinite;
+    border-radius:15px
+}
+
+@media only screen and (max-width:600px){
     input[type="search"]{
-        width: 90px;
+        width: 130px;
     }
     label.navlabel{
-        font-size: 11px;
+        font-size: 14px;
         margin: 5px;
     }
     nav{
-        padding: 0px;
+        padding: 9px 5px 0 5px;
     }
     i.navicon{
         font-size:30px;
     }
+    .userdiv{
+        font-size: 11px;
+    }
+    h4{
+        font-size:10px;
+    }
+    .sidenav{
+        display: flex;
+        flex-direction: row;
+    }
+    .maincontainer{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
+.hdiv{
+    display: flex;
+    flex-direction: row;
+ }
 
+.vdiv{
+    display: flex;
+    flex-direction: column;
+}
+
+h2,h3{
+    color:aliceblue;
+    text-align: center;
+    margin:0px;
+    padding:10px;
+}
 
